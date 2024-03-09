@@ -5,7 +5,7 @@ class TestCalculadora(unittest.TestCase):
     def setUp(self):
         self.calculadora = Calculadora()
 
-    def test_adicao(self):
+    def test_dever_adiciona_dois_numeros(self):
         # Teste de adição de números positivos
         self.assertEqual(self.calculadora.adicao(5, 3), 8)
         # Teste de adição de números negativos
