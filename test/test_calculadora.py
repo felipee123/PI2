@@ -35,12 +35,13 @@ class TestCalculadora(unittest.TestCase):
         # Teste de multiplicação por um
         self.assertEqual(self.calculadora.multiplicacao(5, 1), 5)
 
-    def test_divisao(self):
+    def test_dever_dividir_dois_numeros(self):
         # Teste de divisão de números positivos
         self.assertEqual(self.calculadora.divisao(6, 3), 2)
         # Teste de divisão de números negativos
         self.assertEqual(self.calculadora.divisao(-6, -3), 2)
         # Teste de divisão por zero
+    def test_o_erro_nao_e_possivel_dividir_por_zero(self):
         self.assertEqual(self.calculadora.divisao(5, 0), "ERRO: Não é possível dividir por zero.")
         # Teste de divisão de zero por número positivo
         self.assertEqual(self.calculadora.divisao(0, 5), 0)
