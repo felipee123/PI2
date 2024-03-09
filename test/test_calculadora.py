@@ -15,7 +15,7 @@ class TestCalculadora(unittest.TestCase):
         # Teste de adição de número positivo e negativo
         self.assertEqual(self.calculadora.adicao(5, -3), 2)
 
-    def test_subtracao(self):
+    def test_dever_Subtrair_dois_numeros(self):
         # Teste de subtração de números positivos
         self.assertEqual(self.calculadora.subtracao(5, 3), 2)
         # Teste de subtração de números negativos
@@ -25,7 +25,7 @@ class TestCalculadora(unittest.TestCase):
         # Teste de subtração de número negativo de número positivo
         self.assertEqual(self.calculadora.subtracao(5, -3), 8)
 
-    def test_multiplicacao(self):
+    def test_dever_Multiplicar_dois_numeros(self):
         # Teste de multiplicação de números positivos
         self.assertEqual(self.calculadora.multiplicacao(5, 3), 15)
         # Teste de multiplicação de números negativos
@@ -41,6 +41,7 @@ class TestCalculadora(unittest.TestCase):
         # Teste de divisão de números negativos
         self.assertEqual(self.calculadora.divisao(-6, -3), 2)
         # Teste de divisão por zero
+        
     def test_o_erro_nao_e_possivel_dividir_por_zero(self):
         self.assertEqual(self.calculadora.divisao(5, 0), "ERRO: Não é possível dividir por zero.")
         # Teste de divisão de zero por número positivo
@@ -60,6 +61,8 @@ class TestCalculadora(unittest.TestCase):
         # Teste de divisão
         self.assertEqual(self.calculadora.calcular("/", 6, 3), 2)
         # Teste de divisão por zero
+
+    def test_erro_no_Cálculo(self):
         self.assertEqual(self.calculadora.calcular("/", 5, 0), "ERRO: Não é possível dividir por zero.")
         # Teste de operação inválida
         self.assertEqual(self.calculadora.calcular("?", 5, 3), "ERRO: Operação inválida. Por favor, escolha +, -, * ou /.")
